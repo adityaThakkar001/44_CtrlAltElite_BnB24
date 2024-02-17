@@ -1,0 +1,21 @@
+.h1{
+    font-size: 30px;
+    color: black;
+}
+
+.token{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label{
+    font-size: 20px;
+}
+
+textarea{
+    resize: none;
+}
+
+.complete_form{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}

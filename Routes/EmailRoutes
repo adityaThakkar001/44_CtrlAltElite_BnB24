@@ -1,0 +1,14 @@
+const express = require('express');
+const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URI } = require('../EmailHandler/EmailConstanst');
+const { getTokenFromCode, saveToken } = require('../EmailHandler/util');
+const EmailServiceRouter = express.Router();
+
+EmailServiceRouter.get('/token',async (req,res)=>{
+    const code = req.query.code;
+    const oAuth2Client = new google.auth.OAuth2(CLIENT_ID,CLIENT_SECRET,REDIRECT_URI[0]);
+    const tokens = await getTokenFromCode(oAuth2Client,code);
+    await saveToken(tokens);
+    res.json({status: true});
+});
+
+module.exports = EmailServiceRouter;

@@ -16,6 +16,11 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/css/add_case.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.js" integrity="sha512-BK9PHgiHWfibD1gZHjigMVxh6wMAFhiGa8FV3mYdGIHO7QJWlP/Uy2kTw3ykOLd9OtSJyPSqPNKIRiSmAFw6UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/sendCase.js"></script>
+
   </head>
   <body>
     <div class="w-100 d-flex align-items-center justify-content-center mt-2">
@@ -49,7 +54,7 @@
               <textarea
                 type="text"
                 class="form-control"
-                id="suspectInp"
+                id="summary"
                 placeholder="Summary of the case"
                 resize="off"
                 rows="10"
@@ -69,7 +74,7 @@
               />
             </div>
             <div class="w-100 d-flex align-items-center justify-content-center">
-              <button class="btn bg-primary text-white">Submit Case</button>
+              <button type="button" class="btn bg-primary text-white" onclick="sendData()">Submit Case</button>
             </div>
           </form>
         </div>

@@ -38,7 +38,7 @@ async function saveToken(tokens) {
         await fs.writeFileSync(__dirname + '/token.json', JSON.stringify(tokens));
         return true;
     } catch (err) {
-        console.log(err);
+        console.err(err);
         return false;
     }
 }

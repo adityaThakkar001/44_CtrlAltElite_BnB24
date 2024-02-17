@@ -27,12 +27,13 @@ const caseSchema = new mongoose.Schema({
 
 const CaseInformation = mongoose.model('CaseInformation', caseSchema);
 
-
-const tokenModel = new mongoose.model(new mongoose.Schema({
+const tokenSchema = new mongoose.Schema({
     caseToken:{
         type:String,
         default:''
     }
-}));
+});
+
+const tokenModel =  mongoose.model('tokenInfo',tokenSchema);
 
 module.exports = {CaseInformation,tokenModel};

@@ -1,0 +1,29 @@
+.nav-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+
+.nav-item a{
+    color: white !important;
+    text-decoration: none;
+}
+
+.brand_name{
+    font-size: 60px;
+}
+
+.navBar{
+    border-radius: 50px;
+}
+
+.info{
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.basic_shadow{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-family: "Anta", sans-serif;
+}

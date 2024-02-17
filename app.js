@@ -16,8 +16,14 @@ app.get('/sendEmail',async (req,res)=>{
 
 })
 
-app.get('',async (req,res)=>{
+// add case
+app.get('/RegisterCase',async (req,res)=>{
     res.sendFile(__dirname + '/html/add_case.html')
+})
+
+
+app.get('',async (req,res)=>{
+    res.sendFile(__dirname + '/html/action_items.html')
 })
 
 // Mail Handler 
